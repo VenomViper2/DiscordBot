@@ -10,3 +10,6 @@
 <li> Copy the content into new .js file</li>
 <li> Change the content to suit you</li>
 </ul>
+
+<h3>Helpful links</h3>
+<p><a href="https://discordjs.guide/#before-you-begin" target="_blank">discord.js documentation</p>
