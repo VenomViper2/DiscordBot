@@ -1,0 +1,14 @@
+{
+  "name": "discordbot",
+  "version": "1.0.0",
+  "description": "Cheeky Little Bot",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Venomviper",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.6.0"
+  }
+}
