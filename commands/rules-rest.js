@@ -8,7 +8,12 @@ module.exports = {
   async execute(interaction, client) {
     const embed = new EmbedBuilder()
       .setTitle("Rest & Recovery")
-      .setDescription('When you rest, you recover to some degree. The amount that you recover depends on how restful the sleep was. Compare the nature of the sleep to the following chart to determine how much is recovered.\n Some factors can reduce how restful a night can be. For each of the following, reduce the level of rest by one: Sleeping Hungry. Extreme sensory stimulation (Hot, Cold, noises, light). Sleeping somewhere unsafe, without a trusted person on watch')
+      .setDescription(`When you rest, you recover to some degree. The amount
+      that you recover depends on how restful the sleep was. Compare the nature
+      of the sleep to the following chart to determine how much is recovered.\n
+      Some factors can reduce how restful a night can be. For each of the following,
+      reduce the level of rest by one: Sleeping Hungry. Extreme sensory stimulation
+      (Hot, Cold, noises, light). Sleeping somewhere unsafe, without a trusted person on watch`)
       .setColor(0x18e1ee)
       .setThumbnail(`https://clipartix.com/wp-content/uploads/2017/12/Campfire-hd-camp-fire-clipart-pictures-drawing-vector-art-library.jpg`)
       .setImage('attachment://rest.png')
