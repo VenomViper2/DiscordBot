@@ -2,7 +2,7 @@ const { SlashCommandBuilder, EmbedBuilder } = require("discord.js");
 
 module.exports = {
   data: new SlashCommandBuilder()
-    .setName("rules-henges")
+    .setName("rules-henge")
     .setDescription("See the rules for Henges!"),
   async execute(interaction, client) {
     const embed = new EmbedBuilder()
@@ -47,7 +47,7 @@ module.exports = {
     ]);
 
     await interaction.reply({
-      embeds: [embed]
+      embeds: [embed],
     });
   },
 };
