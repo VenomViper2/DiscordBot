@@ -12,7 +12,8 @@ module.exports = {
       .addFields([
         {
             name: `Public Image`,
-            value: `The general view of the Clergy varies a little from Henge to Henge, often depending on their view of their own Priest. As a general rule though, they are looked upon with a combination of reverence and fear. After all, the Priests hold a great deal of power, and most henges would die without their support. Monks however tend to be looked upon with less caution. They are often seen as friends and allies who do all they can to provide for the places they go, and ask very little in return.
+            value: `The general view of the Clergy varies a little from Henge to Henge, often depending on their view of their own Priest. As a general rule though, they are looked upon with a combination of reverence and fear. After all, the Priests hold a great deal of power, and most henges would die without their support.\n
+             Monks however tend to be looked upon with less caution. They are often seen as friends and allies who do all they can to provide for the places they go, and ask very little in return.
             `,
             inline: false,
         },
