@@ -9,7 +9,7 @@
 <li> Find a reference (ping.js for simple responses, skill-list to add an embed (more options)</li>
 <li> Copy the content into new .js file</li>
 <li> Change the content to suit you</li>
-<li>When you have made your changes make sure to run the command `node deploy-commands.js` before running `npm run start`. this will update the bot with the new commands applicaion. 
+  <li>When you have made your changes make sure to run the command node 	<sub>deploy-commands.js</sub> before running <sub>npm run start</sub>. this will update the bot with the new commands applicaion. 
 </ul>
 
 <h3>Helpful links</h3>
