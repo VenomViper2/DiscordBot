@@ -8,7 +8,7 @@ module.exports = {
     const embed = new EmbedBuilder()
       .setTitle("The Clergy of the Henge Order")
       .setColor(0x18e1ee)
-      .setThumbnail(`https://www.wallpaperflare.com/static/54/502/481/fantasy-art-farm-painting-fantasy-wallpaper.jpg`)
+      .setThumbnail(`https://s1.zerochan.net/Church.600.792560.jpg`)
       .addFields([
         {
           name: `The Grand Dome
@@ -72,18 +72,6 @@ module.exports = {
             `,
             inline: false,
         },
-        {
-            name: `The Grand Pontiff`,
-            value: `The Grand Pontiff is ultimately responsible for the running of the entire Clergy. While this often means delegating his work to others, it also includes managing morale, training, answering queries, resolving disputes and having a constant and intimate awareness of all changes throughout the world. There can only be one Pontiff. When the Pontiff dies, a new one is voted for out of all Priests, Bishops and Archbishops. It requires a unanimous decision from the Arch Bishops (apart from the one being voted for, if one of them is in the running). If at least half of the Bishops vote against that Pontiff, then a new vote is held. If all Priests unanimously vote against them, then a new vote is held.`,
-            inline: false,
-        },
-        {
-            name: `Public Image`,
-            value: `The general view of the Clergy varies a little from Henge to Henge, often depending on their view of their own Priest. As a general rule though, they are looked upon with a combination of reverence and fear. After all, the Priests hold a great deal of power, and most henges would die without their support. Monks however tend to be looked upon with less caution. They are often seen as friends and allies who do all they can to provide for the places they go, and ask very little in return.
-            `,
-            inline: false,
-        },
-
     ]);
 
     await interaction.reply({
