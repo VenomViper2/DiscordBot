@@ -4,10 +4,17 @@ const path = require('node:path');
 require('dotenv').config();
 
 // Require the necessary discord.js classes
-const { Client, Events, GatewayIntentBits, Collection } = require('discord.js');
+const { Client, Events, GatewayIntentBits, Collection, Message } = require('discord.js');
+const { cp } = require('node:fs');
 
 // Create a new client instance
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
+const client = new Client({ intents: [
+	GatewayIntentBits.Guilds,
+	GatewayIntentBits.GuildMessages, 
+	GatewayIntentBits.GuildMessageReactions,
+	GatewayIntentBits.MessageContent
+] 
+});
 
 client.commands = new Collection();
 const commandsPath = path.join(__dirname, 'commands');
@@ -51,5 +58,30 @@ client.on(Events.InteractionCreate, async interaction => {
 	console.log(interaction);
 });
 
+
+// Message replys
+client.on("messageCreate", async message =>{
+	if(message.author.bot){return}
+
+	if(message.content === "(╯°□°）╯︵ ┻━┻"){
+		await message.reply({content: '┬─┬ノ( º _ ºノ)'});
+	}
+	if(message.content.toLowerCase().includes("69")){  
+		await message.reply({content: "69, nice"});
+	}
+	if(message.content.toLowerCase().includes("gloomhaven")){  
+		await message.reply({content: "GLOOMHAVEN"});
+	}
+	if(message.content.toLowerCase().includes("reedtooth") || message.content.toLowerCase().includes("readtooth" || message.content.toLowerCase().includes("reed-tooth"))){  
+		await message.reply({content: "ALL HAIL REEDTOOTH"});
+	}
+	if(message.content.toLowerCase().includes("dankweed")){  
+		await message.reply({content: ":no_smoking:"});
+	}
+	if(message.content.split(" ").includes("crab") || message.content.split(" ").includes("crabs")){  
+		await message.reply({content: "Sorry, what's a crab? Do you mean crawdads?"});
+	}
+}
+)
 // Log in to Discord with your client's token
 client.login(process.env.token);
