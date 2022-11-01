@@ -6,6 +6,7 @@ require('dotenv').config();
 // Require the necessary discord.js classes
 const { Client, Events, GatewayIntentBits, Collection, Message } = require('discord.js');
 const { cp } = require('node:fs');
+const { Console } = require('node:console');
 
 // Create a new client instance
 const client = new Client({ intents: [
@@ -83,6 +84,7 @@ client.on("messageCreate", async message =>{
 	}
 }
 )
+console.log(process.env.guildid);
 // Log in to Discord with your client's token
 client.login(process.env.token);
 
