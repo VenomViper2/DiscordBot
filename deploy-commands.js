@@ -30,5 +30,6 @@ const rest = new REST({ version: '10' }).setToken(process.env.token);
 	} catch (error) {
 		// And of course, make sure you catch and log any errors!
 		console.error(error);
+		console.log("stuff")
 	}
 })();
