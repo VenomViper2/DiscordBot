@@ -1,6 +1,7 @@
 const fs = require("node:fs");
 const path = require("node:path");
 require("dotenv").config();
+const BotMessenger = require("./classes/response/BotMessenger");
 
 // Require the necessary discord.js classes
 const {
@@ -70,34 +71,29 @@ client.on(Events.InteractionCreate, async (interaction) => {
     console.log(interaction);
 });
 
-// Message replys
+// Message replies
 client.on("messageCreate", async (message) => {
-    await responseBuilder("(╯°□°）╯︵ ┻━┻", "┬─┬ノ( º _ ºノ)", message);
-    await responseBuilder("69", "69, nice.", message);
-    await responseBuilder("gloomhaven", "GLOOMHAVEN", message);
-    await responseBuilder("reedtooth", "ALL HAIL REEDTOOTH", message);
-    await responseBuilder("dankweed", ":no_smoking:", message);
-    await responseBuilder("Stimulate", "OUCH", message);
-    await responseBuilder("mitch", "Sorry, do you mean Wendwillow?", message);
-    await responseBuilder("tom", "Sorry, do you mean Jerik?", message);
-    await responseBuilder("crab", "Sorry what is a crab? Do you mean Crawdad?", message);
-    await responseBuilder("dan", "Sorry, do you mean Nathair?", message);
-    await responseBuilder("ben", "Sorry, do you mean Demikas?", message);
-    await responseBuilder("hatfield", "Sorry, do you mean Layla ?", message);
-    await responseBuilder("matt", "Sorry, do you mean Ned?", message);
-    await responseBuilder("phil", "Sorry, do you mean... well I guess Phil is ok.", message);
+    let bot = new BotMessenger();
+    let messageAndResponse = new Map();
+    messageAndResponse.set("69", "69, nice.")
+    messageAndResponse.set("gloomhaven", "GLOOOOOMHAVEN!!!")
+    messageAndResponse.set("reedtooth", "ALL HAIL REEDTOOTH!")
+    messageAndResponse.set("dankweed", ":no_smoking:")
+    messageAndResponse.set("mitch", "Sorry, do you mean Wendwillow?")
+    messageAndResponse.set("tom", "Sorry, do you mean Jerik?")
+    messageAndResponse.set("crab", "Sorry what is a crab? Do you mean Crawdad?")
+    messageAndResponse.set("dan", "Sorry, do you mean Nathair?")
+    messageAndResponse.set("ben", "Sorry, do you mean Demikas?")
+    messageAndResponse.set("hatfield", "Sorry, do you mean Layla?")
+    messageAndResponse.set("matt", "Sorry, do you mean Ned")
+    messageAndResponse.set("phil", "Sorry, do you mean... well I guess Phil is ok.")
+    messageAndResponse.set("maz", "Sorry, do you mean Glass?")
+    for (let [key, value] of messageAndResponse) {
+        await bot.responder(key, value, message);
+    }
+
 });
 
-async function responseBuilder(input, output, message) {
-
-    if (message.author.bot) {
-        return;
-    }
-    if (message.content.toString().toLowerCase() === input) {
-        await message.reply({content: output});
-    }
-
-}
 
 // Log in to Discord with your client's token
 client.login(process.env.token);
