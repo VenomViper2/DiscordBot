@@ -9,7 +9,6 @@ const {
     Events,
     GatewayIntentBits,
     Collection,
-    Message,
 } = require("discord.js");
 
 // Create a new client instance
@@ -71,29 +70,14 @@ client.on(Events.InteractionCreate, async (interaction) => {
     console.log(interaction);
 });
 
-// Message replies
+// Bot replies to messages
 client.on("messageCreate", async (message) => {
     let bot = new BotMessenger();
-    let messageAndResponse = new Map();
-    messageAndResponse.set("69", "69, nice.")
-    messageAndResponse.set("gloomhaven", "GLOOOOOMHAVEN!!!")
-    messageAndResponse.set("reedtooth", "ALL HAIL REEDTOOTH!")
-    messageAndResponse.set("dankweed", ":no_smoking:")
-    messageAndResponse.set("mitch", "Sorry, do you mean Wendwillow?")
-    messageAndResponse.set("tom", "Sorry, do you mean Jerik?")
-    messageAndResponse.set("crab", "Sorry what is a crab? Do you mean Crawdad?")
-    messageAndResponse.set("dan", "Sorry, do you mean Nathair?")
-    messageAndResponse.set("ben", "Sorry, do you mean Demikas?")
-    messageAndResponse.set("hatfield", "Sorry, do you mean Layla?")
-    messageAndResponse.set("matt", "Sorry, do you mean Ned")
-    messageAndResponse.set("phil", "Sorry, do you mean... well I guess Phil is ok.")
-    messageAndResponse.set("maz", "Sorry, do you mean Glass?")
-    for (let [key, value] of messageAndResponse) {
-        await bot.responder(key, value, message);
-    }
-
+    let responseWords = bot.userMessageAndBotResponse;
+    responseWords.forEach((value, key) => {
+        bot.responder(key, value, message);
+    })
 });
-
 
 // Log in to Discord with your client's token
 client.login(process.env.token);
