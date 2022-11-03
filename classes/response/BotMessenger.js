@@ -2,6 +2,7 @@ class BotMessenger {
     //Map of words and bot responses to those words
     userMessageAndBotResponse = new Map([
         ["69", "69, nice."],
+        ["(╯°□°）╯︵ ┻━┻", "┬─┬ノ(ಠ_ಠノ)"],
         ["gloomhaven", "GLOOOOOMHAVEN!!!"],
         ["reedtooth", "ALL HAIL REEDTOOTH!"],
         ["dankweed", ":no_smoking:"],
