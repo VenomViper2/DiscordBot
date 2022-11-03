@@ -20,7 +20,7 @@ class BotMessenger {
         if (message.author.bot) {
             return;
         }
-        if (message.content.toString().toLowerCase() === input) {
+        if (message.content.toLowerCase().split(" ").includes(input)) {
             await message.reply({content: output});
         }
     }
