@@ -31,8 +31,15 @@ class BotMessenger {
         ["geeze", "PLEASE MIND YOUR LANGUAGE"],
         ["goldnose", "What a kiss up"],
         ["gold-nose", "What a kiss up"],
+        ["gold", "What a kiss up"],
+        ["brown", "Don't you mean gold"],
+        ["good girl", ";)"],
         ["you rock", "Cancel that. NO, NO."],
         ["bait", "Shark bait hoo ha ha"],
+        ["gg", "GG"],
+        ["bg", ":("],
+        ["wolf", "What's a wolf?"],
+
     ]);
 
     async responder(input, output, message) {
